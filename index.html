@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
 
     <title>Les petits plats</title>
@@ -64,26 +65,15 @@
                 </div>
             </div>
         </div>
-        <main class="row">
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-header img-recipe"></div>
-                    <div class="card-body bg-gray px-3 pt-3 pb-0">
-                        <h5 class="card-title">Titre recette</h5>
-                        <div class="row card-recipe">
-                            <p class="col"><span class="font-weight-bold">Lait de coco:</span> 400ml
-                                <br><span class="font-weight-bold">Jus de citron:</span> 2
-                                <br><span class="font-weight-bold">Créme de coco:</span> 4 cuillères
-                                <br><span class="font-weight-bold">Sucre:</span> 20g
-                                <br><span class="font-weight-bold">Glaçons:</span> 2</p>
-                            <p class="col">Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <main class="row recipes_section">
         </main>
     </div>
     <!-- Optional JavaScript -->
+    <script src="./scripts/data/recipes.js"></script>
+    <script src="./scripts/models/recipe.js"></script>
+    <script src="./scripts/models/ingredient.js"></script>
+    <script src="./scripts/templates/recipeCard.js"></script>
+    <script src="./scripts/page/index.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
