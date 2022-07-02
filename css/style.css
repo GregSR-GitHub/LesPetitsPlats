@@ -19,7 +19,7 @@
 .text-control{
     border: 0;
     width: 100px;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .text-control:focus{
@@ -34,4 +34,25 @@
 .img-recipe{
     height: 178px;
     background-color: #C7BEBE;
+}
+
+div.dropdown-multi{
+    width: 527px;
+}
+ 
+.dropdown-col{
+    display: inline-block;
+    width: 175px;
+}
+
+.dropdown-col{
+    color: white;
+    font-size: 0.8em;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-item{
+    padding: 0;
 }

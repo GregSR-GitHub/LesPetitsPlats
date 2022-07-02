@@ -7,10 +7,9 @@ class RecipeCard{
         const wrapper = document.createElement('div')
         wrapper.classList.add('card-wrapper', 'col-4', 'my-3')
         let ingredientList = ''
-        console.log(this._recipe.ingredients)
          this._recipe.ingredients.forEach((ingredient) => {
             const ingredientData = new Ingredient(ingredient);
-            ingredientList = ingredientList + `<span class="font-weight-bold">${ingredientData.name}</span> ${ingredientData.quantity} <br>`
+            ingredientList = ingredientList + `<li><span class="font-weight-bold">${ingredientData.name}</span> ${ingredientData.quantity} </li>`
          })
 
         const recipeCard =`<div class="card">
@@ -19,7 +18,7 @@ class RecipeCard{
                         <p class="card-title d-flex justify-content-between"><span class="d-inline-block">${this._recipe.name}</span>
                         <span class="font-weight-bold d-inline-block" style="min-width:90px"><i class="bi bi-clock"></i> ${this._recipe.time} min</span></p>
                         <div class="row card-recipe">
-                            <p class="col">${ingredientList}</p>
+                            <ul class="col list-unstyled">${ingredientList}</ul>
                             <p class="col pl-0">${this._recipe.descriptionPreview}</p>
                         </div>
                     </div>
