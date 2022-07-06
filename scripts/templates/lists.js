@@ -1,38 +1,47 @@
-function updateApplianceList(appliance){
-    if(!allAppliances.includes(appliance)){
-        allAppliances.push(appliance)
+function initApplianceList(appliance){
+    appliance = appliance.replace("'", "\'")
+    let newAppliance = appliance.toLowerCase()
+    if(!allAppliances.includes(newAppliance)){
+        allAppliances.push(newAppliance)
     }
 }
 
-function updateIngredientsList(ingredients){
+function initIngredientsList(ingredients){
 
     ingredients.forEach((ingredientData) =>{
-       if(!allIngredients.includes(ingredientData.ingredient)){
-        allIngredients.push(ingredientData.ingredient)
+        let newIngredient = ingredientData.ingredient
+        newIngredient = newIngredient.toLowerCase()
+       if(!allIngredients.includes(newIngredient)){
+        allIngredients.push(newIngredient)
        } 
     })
 }
 
-function updateUstensilsList(ustensils){
+function initUstensilsList(ustensils){
 
     ustensils.forEach((ustensil) =>{
-       if(!allUstensils.includes(ustensil)){
-        allUstensils.push(ustensil)
+        let newUstensil = ustensil.toLowerCase()
+       if(!allUstensils.includes(newUstensil)){
+        allUstensils.push(newUstensil)
        } 
     })
 }
 
-function displayList(data){
+function displayList(data, type){
     let ListHTML = ''
     let nbItem = 0
     data.forEach((appliance) =>{
-        
-        if(nbItem>=30){
-            ListHTML = ListHTML + `<a class="dropdown-col dropdown-item px-2" style="display:none" href="#">${appliance}</a>`
-        }else{
-           ListHTML = ListHTML + `<a class="dropdown-col dropdown-item px-2" href="#">${appliance}</a>`
+        const name = appliance.replace("'", "\\'")
+        if(nbItem<30){
+           ListHTML = ListHTML + `<a class="dropdown-item px-2" href="#" onclick="displayTag('${name}','${type}')">${appliance}</a>`
         nbItem++ 
         }
     })
+
+    if(nbItem>20){
+        document.getElementById(type+'_list').style.width = '526px'
+    } else if (nbItem>10){
+        document.getElementById(type+'_list').style.width = '351px'
+    }
     return ListHTML
 }

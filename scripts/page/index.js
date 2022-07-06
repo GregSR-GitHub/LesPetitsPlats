@@ -1,4 +1,4 @@
-class IndexPage {
+class App {
     constructor () {
       this.urlData = './data/recipes.js'
       this.section = document.querySelector('.recipes_section')
@@ -10,16 +10,16 @@ class IndexPage {
         const recipeData = new Recipe(recipe);
         const recipeCardDOM = new RecipeCard(recipeData).createCard()
         this.section.appendChild(recipeCardDOM)
-        updateIngredientsList(recipeData.ingredients)
-        updateApplianceList(recipeData.appliance)
-        updateUstensilsList(recipeData.ustensils)
+        initIngredientsList(recipeData.ingredients)
+        initApplianceList(recipeData.appliance)
+        initUstensilsList(recipeData.ustensils)
       })
       console.log(allUstensils)
-      document.getElementById('appliancesList').innerHTML = displayList(allAppliances)
-      document.getElementById('ingredientsList').innerHTML = displayList(allIngredients)
-      document.getElementById('ustensilsList').innerHTML = displayList(allUstensils)
+      document.getElementById('appliances_list').innerHTML = displayList(allAppliances ,'appliances')
+      document.getElementById('ingredients_list').innerHTML = displayList(allIngredients ,'ingredients')
+      document.getElementById('ustensils_list').innerHTML = displayList(allUstensils ,'ustensils')
     }
   }
   
-  const page = new IndexPage()
-  page.init()
+  const myApp = new App()
+  myApp.init()

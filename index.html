@@ -29,38 +29,34 @@
             </form>
         </nav>
         <div class="row mt-3">
-            <div class="col-12">
-                <button class="btn btn-sm bg-ingredients">Coco <i class="bi bi-x-circle"></i></button>
-                <button class="btn btn-sm bg-ingredients">Lait <i class="bi bi-x-circle"></i></button>
-                <button class="btn btn-sm bg-appareils">Mixer <i class="bi bi-x-circle"></i></button>
-                <button class="btn btn-sm bg-ustensils">Bol <i class="bi bi-x-circle"></i></button>
-                <button class="btn btn-sm bg-ustensils">Spatule <i class="bi bi-x-circle"></i></button>
+            <div class="col-12" id="tags_section">
+            
             </div>
         </div>
         <div class="row p-2">
             <div class=" dropdown">
-                <button class="btn btn-lg bg-ingredients dropdown-toggle m-2" type="button" data-toggle="dropdown" id="ingredientsSelectButton" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-lg bg-ingredients dropdown-toggle m-2" type="button" data-toggle="dropdown" id="ingredients-btn" aria-haspopup="true" aria-expanded="false">
                     
-                        <input class="bg-ingredients text-control" type="search" id="ingredientsSearch" placeholder="Ingredients..." aria-label="Search">
+                        <input class="bg-ingredients text-control" type="search" id="ingredients_search" placeholder="Ingredients..." aria-label="Search">
                     
                 </button>
-                <div class="dropdown-menu bg-ingredients dropdown-multi"  id="ingredientsList" aria-labelledby="ingredientsSelectButton">
+                <div class="dropdown-menu bg-ingredients dropdown-multi"  id="ingredients_list" aria-labelledby="ingredients-btn">
 
                 </div>
             </div>
             <div class="dropdown">
-                <button class="btn btn-lg bg-appareils dropdown-toggle m-2" type="button" data-toggle="dropdown" id="appareilsSelectButton" aria-haspopup="true" aria-expanded="false">
-                    <input class="bg-appareils text-control" type="search"  id="appareilsSearch" placeholder="Appareils..." aria-label="Search">
+                <button class="btn btn-lg bg-appliances dropdown-toggle m-2" type="button" data-toggle="dropdown" id="appliances-btn" aria-haspopup="true" aria-expanded="false">
+                    <input class="bg-appliances text-control" type="search"  id="appliances_search" placeholder="Appareils..." aria-label="Search">
                 </button>
-                <div class="dropdown-menu bg-appareils  dropdown-multi"  id="appliancesList" aria-labelledby="appareilsSelectButton">
+                <div class="dropdown-menu bg-appliances dropdown-multi"  id="appliances_list" aria-labelledby="appliances-btn">
                     
                 </div>
             </div>
             <div class="dropdown">
-                <button class="btn  btn-lg bg-ustensils dropdown-toggle m-2" type="button" data-toggle="dropdown" id="ustensilsSelectButton" aria-haspopup="true" aria-expanded="false">
+                <button class="btn  btn-lg bg-ustensils dropdown-toggle m-2" type="button" data-toggle="dropdown" id="ustensils-btn" aria-haspopup="true" aria-expanded="false">
                     <input class="bg-ustensils text-control" type="search" id="ustensilsSearch" placeholder="Ustensils..." aria-label="Search">
                 </button>
-                <div class="dropdown-menu bg-ustensils  dropdown-multi"  id="ustensilsList" aria-labelledby="ustensilsSelectButton">
+                <div class="dropdown-menu dropdown-menu-right bg-ustensils  dropdown-multi"  id="ustensils_list" aria-labelledby="ustensils-btn">
                     
                 </div>
             </div>
@@ -75,6 +71,7 @@
     <script src="./scripts/models/ingredient.js"></script>
     <script src="./scripts/templates/recipeCard.js"></script>
     <script src="./scripts/templates/lists.js"></script>
+    <script src="./scripts/templates/tags.js"></script>
     <script src="./scripts/page/index.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

@@ -7,10 +7,17 @@
     background-color: #3282F7;
     color: white;
 }
+
 .bg-appareils{
     background-color: #68D9A4;
     color: white;
 }
+
+.bg-appliances{
+    background-color: #68D9A4;
+    color: white;
+}
+
 .bg-ustensils{
     background-color: #ED6454;
     color: white;
@@ -36,16 +43,15 @@
     background-color: #C7BEBE;
 }
 
-div.dropdown-multi{
-    width: 527px;
+div.dropdown-multi.show{
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 300px;
 }
  
-.dropdown-col{
+.dropdown-item{
     display: inline-block;
     width: 175px;
-}
-
-.dropdown-col{
     color: white;
     font-size: 0.8em;
     white-space: nowrap;
@@ -53,6 +59,29 @@ div.dropdown-multi{
     text-overflow: ellipsis;
 }
 
-.dropdown-item{
-    padding: 0;
+.dropdown-toggle::after {
+    margin-left: .255em;
+    vertical-align: 2px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2.5px solid;
+    border-left: 2.5px solid;
+    height: 10px;
+    width: 10px;
+    color: white;
+    transform: rotate(-45deg);
+    transform-origin: 2px 5px;
+    transition: transform 200ms ease;
+}
+
+.dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(135deg);
+}
+
+.tag{
+    white-space: nowrap;
+}
+
+.dropdown-item::first-letter, .tag::first-letter{
+    text-transform: capitalize;
 }

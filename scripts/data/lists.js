@@ -1,3 +1,4 @@
-const allIngredients = []
-const allAppliances = []
-const allUstensils = []
+let allIngredients = []
+let allAppliances = []
+let allUstensils = []
+let allTags = []

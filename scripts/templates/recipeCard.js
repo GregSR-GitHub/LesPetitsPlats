@@ -5,7 +5,7 @@ class RecipeCard{
 
     createCard() {
         const wrapper = document.createElement('div')
-        wrapper.classList.add('card-wrapper', 'col-4', 'my-3')
+        wrapper.classList.add('card-wrapper', 'col-md-6', 'col-lg-4', 'my-3')
         let ingredientList = ''
          this._recipe.ingredients.forEach((ingredient) => {
             const ingredientData = new Ingredient(ingredient);
