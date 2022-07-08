@@ -24,7 +24,7 @@
         </header>
         <nav class="row">
             <form class="form-inline col-12">
-                <input class="form-control col-12 bg-gray" type="search" placeholder="Recherche de recettes" aria-label="Search">
+                <input class="form-control col-12 bg-gray" type="search"  id="main_search" placeholder="Recherche de recettes" aria-label="Search">
                 
             </form>
         </nav>
@@ -34,11 +34,9 @@
             </div>
         </div>
         <div class="row p-2">
-            <div class=" dropdown">
+            <div class=" dropdown dropdown-ingredients">
                 <button class="btn btn-lg bg-ingredients dropdown-toggle m-2" type="button" data-toggle="dropdown" id="ingredients-btn" aria-haspopup="true" aria-expanded="false">
-                    
                         <input class="bg-ingredients text-control" type="search" id="ingredients_search" placeholder="Ingredients..." aria-label="Search">
-                    
                 </button>
                 <div class="dropdown-menu bg-ingredients dropdown-multi"  id="ingredients_list" aria-labelledby="ingredients-btn">
 
@@ -72,6 +70,8 @@
     <script src="./scripts/templates/recipeCard.js"></script>
     <script src="./scripts/templates/lists.js"></script>
     <script src="./scripts/templates/tags.js"></script>
+    <script src="./scripts/utils/tagsSearch.js"></script>
+    <script src="./scripts/utils/search.js"></script>
     <script src="./scripts/page/index.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

@@ -48,6 +48,10 @@ div.dropdown-multi.show{
     flex-flow: column wrap;
     max-height: 300px;
 }
+.dropdown-menu{
+    border: 0;
+    margin: -5px 0 0;
+}
  
 .dropdown-item{
     display: inline-block;

@@ -1,5 +1,6 @@
 function initApplianceList(appliance){
     appliance = appliance.replace("'", "\'")
+    appliance = appliance.replace(".", "")
     let newAppliance = appliance.toLowerCase()
     if(!allAppliances.includes(newAppliance)){
         allAppliances.push(newAppliance)
@@ -31,7 +32,7 @@ function displayList(data, type){
     let ListHTML = ''
     let nbItem = 0
     data.forEach((appliance) =>{
-        const name = appliance.replace("'", "\\'")
+        let name = appliance.replace("'", "\\'")
         if(nbItem<30){
            ListHTML = ListHTML + `<a class="dropdown-item px-2" href="#" onclick="displayTag('${name}','${type}')">${appliance}</a>`
         nbItem++ 
@@ -39,9 +40,9 @@ function displayList(data, type){
     })
 
     if(nbItem>20){
-        document.getElementById(type+'_list').style.width = '526px'
+        document.getElementById(type+'_list').style.width = '525px'
     } else if (nbItem>10){
-        document.getElementById(type+'_list').style.width = '351px'
+        document.getElementById(type+'_list').style.width = '350px'
     }
     return ListHTML
 }
