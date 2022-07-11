@@ -21,10 +21,11 @@ class App {
       allIngredients = []
       allAppliances = []
       allUstensils = []
-      await updateRecipesByTags()    
-      console.log(foundRecipes)
+      await updateRecipesByTags()
+      const finalRecipesData = await getRecipesbySearch()
+      console.log(finalRecipesData)
       // Récupère les données des recettes
-      foundRecipes.forEach((recipe) => {
+      finalRecipesData.forEach((recipe) => {
         const recipeData = new Recipe(recipe);
         const recipeCardDOM = new RecipeCard(recipeData).createCard()
         this.section.appendChild(recipeCardDOM)
