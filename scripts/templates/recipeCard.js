@@ -27,3 +27,13 @@ class RecipeCard{
         return wrapper
     }
 }
+
+function noRecipe() {
+    const wrapper = document.createElement('div')
+    wrapper.classList.add('norecipes', 'col-12')
+
+    const norecipeCard =`<p class="bg-gray px-3 pt-3 pb-0">« Aucune recette ne correspond à votre critère... vous pouvez
+    chercher « tarte aux pommes », « poisson », etc.</p>`
+    wrapper.innerHTML = norecipeCard
+    return wrapper
+}
