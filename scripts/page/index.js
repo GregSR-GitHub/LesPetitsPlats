@@ -14,13 +14,15 @@ class App {
       })
       this.displayAllList()
     }
-    
+
     async update () {
       // Efface les recettes précédement affichée et les listes
       this.section.innerHTML = ''
       allIngredients = []
       allAppliances = []
       allUstensils = []
+      await updateRecipesByTags()    
+      console.log(foundRecipes)
       // Récupère les données des recettes
       foundRecipes.forEach((recipe) => {
         const recipeData = new Recipe(recipe);

@@ -31,10 +31,10 @@ function initUstensilsList(ustensils){
 function displayList(data, type){
     let ListHTML = ''
     let nbItem = 0
-    data.forEach((appliance) =>{
-        let name = appliance.replace("'", "\\'")
+    data.forEach((item) =>{
+        let name = item.replace("'", "\\'")
         if(nbItem<30){
-           ListHTML = ListHTML + `<a class="dropdown-item px-2" href="#" onclick="displayTag('${name}','${type}')">${appliance}</a>`
+           ListHTML = ListHTML + `<a class="dropdown-item px-2" href="#" onclick="displayTag('${name}','${type}')">${item}</a>`
         nbItem++ 
         }
     })
@@ -43,6 +43,8 @@ function displayList(data, type){
         document.getElementById(type+'_list').style.width = '525px'
     } else if (nbItem>10){
         document.getElementById(type+'_list').style.width = '350px'
+    }else if(nbItem>0){
+        document.getElementById(type+'_list').style.width = '175px'
     }
     return ListHTML
 }
