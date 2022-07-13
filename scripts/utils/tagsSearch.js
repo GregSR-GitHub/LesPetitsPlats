@@ -26,7 +26,6 @@ function searchTagIngredients(){
     console.log(Input)
     allIngredients.forEach((ingredient) => {
         if(ingredient.includes(Input)){
-            console.log(ingredient)
             searchIngredientsArray.push(ingredient)
         }
       })
@@ -39,7 +38,6 @@ function searchTagAppliances(){
     console.log(Input)
     allAppliances.forEach((appliance) => {
         if(appliance.includes(Input)){
-            console.log(appliance)
             searchAppliancesArray.push(appliance)
         }
       })
@@ -52,7 +50,6 @@ function searchTagUstensils(){
     console.log(Input)
     allUstensils.forEach((ustensil) => {
         if(ustensil.includes(Input)){
-            console.log(ustensil)
             searchUstensilsArray.push(ustensil)
         }
       })

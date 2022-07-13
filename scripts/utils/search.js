@@ -12,24 +12,28 @@ function getRecipesbySearch(){
     let foundRecipebySearch = foundRecipes
     
     if(searchInput.value.length>=3){
-        searchData.forEach((word) => {
+        for(let i=0; i<searchData.length;i++) {
+            let word = searchData[i]
             let searchArray = []
             word = word.toLowerCase()
-            foundRecipebySearch.forEach((recipe) => {
+            for(let i=0; i<foundRecipebySearch.length;i++) {
+            let recipe = foundRecipebySearch[i]
+                //Création d'un variable contennant toutes les informations de la recette
                 let allText = recipe.description + recipe.name + recipe.appliance
-                recipe.ingredients.forEach((ingredientData) => {
-                    allText = allText + ingredientData.ingredient
-                })
-                recipe.ustensils.forEach((ustensil) => {
-                    allText = allText + ustensil
-                })
+                for(let i=0; i<recipe.ingredients.length;i++) {
+                    allText = allText + recipe.ingredients[i].ingredient
+                }
+                for(let i=0; i<recipe.ustensils.length;i++) {
+                    allText = allText + recipe.ustensils[i]
+                }
                 allText = allText.toLowerCase()
-                if(allText.search(word)>=0){
+                //Cherche la présence du mot recherché dans la recette
+                if(allText.indexOf(word)>=0){
                     searchArray.push(recipe)
                 }
-            })
+            }
             foundRecipebySearch = searchArray
-        })
+        }
     }
     return foundRecipebySearch
 }
