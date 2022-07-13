@@ -4,7 +4,7 @@ class App {
       this.section = document.querySelector('.recipes_section')
     }
   
-    async init () {
+    init () {
       // Récupère les données des recettes
       recipes.forEach((recipe) => {
         const recipeData = new Recipe(recipe);
@@ -15,14 +15,14 @@ class App {
       this.displayAllList()
     }
 
-    async update () {
+    update () {
       // Efface les recettes précédement affichée et les listes
       this.section.innerHTML = ''
       allIngredients = []
       allAppliances = []
       allUstensils = []
-      await updateRecipesByTags()
-      const finalRecipesData = await getRecipesbySearch()
+      updateRecipesByTags()
+      const finalRecipesData = getRecipesbySearch()
       console.log(finalRecipesData)
       // Récupère les données des recettes
       finalRecipesData.forEach((recipe) => {
@@ -31,16 +31,20 @@ class App {
         this.section.appendChild(recipeCardDOM)
         this.updateListArray(recipeData)
       })
+      if(finalRecipesData.length<=0){
+        const noRecipeMessage = noRecipe()
+        this.section.appendChild(noRecipeMessage)
+      }
       this.displayAllList()
     }
 
-    async displayAllList () {
+    displayAllList () {
       document.getElementById('appliances_list').innerHTML = displayList(allAppliances ,'appliances')
       document.getElementById('ingredients_list').innerHTML = displayList(allIngredients ,'ingredients')
       document.getElementById('ustensils_list').innerHTML = displayList(allUstensils ,'ustensils')
     }
 
-    async updateListArray (data) {
+    updateListArray (data) {
         initIngredientsList(data.ingredients)
         initApplianceList(data.appliance)
         initUstensilsList(data.ustensils)

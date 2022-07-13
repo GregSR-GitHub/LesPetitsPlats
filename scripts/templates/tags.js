@@ -6,7 +6,7 @@ class Tag{
         this._type = type
     }
 
-    async createTag(){
+    createTag(){
         const wrapper = document.createElement('button')
         wrapper.classList.add('tag', 'btn', 'mx-1','btn-sm', 'bg-' + this._type)
         let tagHTML = this._name + ' <i class="bi bi-x-circle"></i>'
@@ -22,7 +22,7 @@ class Tag{
         return wrapper
     }
 
-    async closeTag(tagLink){
+    closeTag(tagLink){
         const that = this
         tagLink.addEventListener('click', function () {
             if(that._type == 'ingredients'){
@@ -46,7 +46,7 @@ class Tag{
     }
 }
 
-async function displayTag(name, type){
+function displayTag(name, type){
     let allTags = allIngredientsTags
     if(type == "ingredients"){
         allTags = allIngredientsTags
@@ -60,7 +60,7 @@ async function displayTag(name, type){
         console.log(name + ' est déja crée.')
     }else{
     const tag = new Tag(name, type)
-    const tagCard = await tag.createTag()
+    const tagCard = tag.createTag()
     tagsSection.appendChild(tagCard)
     myApp.update()
     

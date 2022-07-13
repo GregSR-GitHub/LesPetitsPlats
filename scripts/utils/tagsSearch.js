@@ -59,7 +59,7 @@ function searchTagUstensils(){
     document.getElementById('ustensils_list').innerHTML = displayList(searchUstensilsArray ,'ustensils')
     }
 
-async function updateRecipesByTags(){
+function updateRecipesByTags(){
     let searchByTagsArray = []
     //Ne conserve que les recettes correspondant aux tags ingrédients sélectionnés
     allIngredientsTags.forEach((tag) => {

@@ -2,14 +2,15 @@ const searchInput = document.getElementById('main_search')
 
 searchInput.addEventListener("input", searchRecipe)
 
-async function searchRecipe(){  
+function searchRecipe(){  
     myApp.update()
 }
 
-async function getRecipesbySearch(){
+function getRecipesbySearch(){
     const searchData = searchInput.value.split(/[\s,]+/)
     console.log(searchData)
     let foundRecipebySearch = foundRecipes
+    
     if(searchInput.value.length>=3){
         searchData.forEach((word) => {
             let searchArray = []
