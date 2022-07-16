@@ -12,7 +12,7 @@ function initIngredientsList(ingredients){
     ingredients.forEach((ingredientData) =>{
         let newIngredient = ingredientData.ingredient
         newIngredient = newIngredient.toLowerCase()
-       if(!allIngredients.includes(newIngredient)){
+        if(!allIngredients.includes(newIngredient)){
         allIngredients.push(newIngredient)
        } 
     })
@@ -22,7 +22,7 @@ function initUstensilsList(ustensils){
 
     ustensils.forEach((ustensil) =>{
         let newUstensil = ustensil.toLowerCase()
-       if(!allUstensils.includes(newUstensil)){
+        if(!allUstensils.includes(newUstensil)){
         allUstensils.push(newUstensil)
        } 
     })

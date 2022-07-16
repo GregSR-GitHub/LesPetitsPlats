@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/style.css">
 
     <title>Les petits plats</title>
@@ -23,9 +24,9 @@
             </div>
         </header>
         <nav class="row">
-            <form class="form-inline col-12">
+            <form class="form-inline col-12 search-form">
                 <input class="form-control col-12 bg-gray" type="search"  id="main_search" placeholder="Recherche de recettes" aria-label="Search">
-                
+                <span class="search-icon bi bi-search"></span>
             </form>
         </nav>
         <div class="row mt-3">
@@ -36,7 +37,7 @@
         <div class="row p-2">
             <div class=" dropdown dropdown-ingredients">
                 <button class="btn btn-lg bg-ingredients dropdown-toggle m-2" type="button" data-toggle="dropdown" id="ingredients-btn" aria-haspopup="true" aria-expanded="false">
-                        <input class="bg-ingredients text-control" type="search" id="ingredients_search" placeholder="Ingredients..." aria-label="Search">
+                        <input class="bg-ingredients text-control" type="search" id="ingredients_search" placeholder="Ingredients" aria-label="Search">
                 </button>
                 <div class="dropdown-menu bg-ingredients dropdown-multi"  id="ingredients_list" aria-labelledby="ingredients-btn">
 
@@ -44,7 +45,7 @@
             </div>
             <div class="dropdown">
                 <button class="btn btn-lg bg-appliances dropdown-toggle m-2" type="button" data-toggle="dropdown" id="appliances-btn" aria-haspopup="true" aria-expanded="false">
-                    <input class="bg-appliances text-control" type="search"  id="appliances_search" placeholder="Appareils..." aria-label="Search">
+                    <input class="bg-appliances text-control" type="search"  id="appliances_search" placeholder="Appareils" aria-label="Search">
                 </button>
                 <div class="dropdown-menu bg-appliances dropdown-multi"  id="appliances_list" aria-labelledby="appliances-btn">
                     
@@ -52,7 +53,7 @@
             </div>
             <div class="dropdown">
                 <button class="btn  btn-lg bg-ustensils dropdown-toggle m-2" type="button" data-toggle="dropdown" id="ustensils-btn" aria-haspopup="true" aria-expanded="false">
-                    <input class="bg-ustensils text-control" type="search" id="ustensils_search" placeholder="Ustensils..." aria-label="Search">
+                    <input class="bg-ustensils text-control" type="search" id="ustensils_search" placeholder="Ustensils" aria-label="Search">
                 </button>
                 <div class="dropdown-menu dropdown-menu-right bg-ustensils  dropdown-multi"  id="ustensils_list" aria-labelledby="ustensils-btn">
                     

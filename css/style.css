@@ -1,3 +1,6 @@
+body{
+    font-family:  'Lato', sans-serif;
+}
 
 .bg-gray{
     background-color: #E7E7E7;
@@ -23,10 +26,29 @@
     color: white;
 }
 
+.search-form{
+    position: relative;
+}
+.form-control{
+    height: 69px;
+}
+
+.search-icon{
+    position: absolute;
+    display: block;
+    right: 30px;
+    font-size: 1.5rem;
+}
+
 .text-control{
     border: 0;
     width: 100px;
     font-size: 1rem;
+}
+
+.text-control::placeholder{
+    color: white;
+    opacity: 1;
 }
 
 .text-control:focus{
@@ -34,8 +56,21 @@
     outline: none;
 }
 
+.btn-lg{
+    height: 69px;
+}
+
+.card{
+    min-height: 364px;
+}
+
+
 .card-recipe{
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+}
+
+.recipe-time{
+    min-width:90px
 }
 
 .img-recipe{
