@@ -1,5 +1,4 @@
 const searchInput = document.getElementById('main_search')
-
 searchInput.addEventListener("input", searchRecipe)
 
 function searchRecipe(){  
@@ -7,29 +6,22 @@ function searchRecipe(){
 }
 
 function getRecipesbySearch(){
-    const searchData = searchInput.value.split(/[\s,]+/)
-    console.log(searchData)
+    let searchData = searchInput.value.split(/[\s,.():;]+/)
+    searchData = searchData.map(word => word.toLowerCase())
     let foundRecipebySearch = foundRecipes
     
     if(searchInput.value.length>=3){
         searchData.forEach((word) => {
-            let searchArray = []
-            word = word.toLowerCase()
-            foundRecipebySearch.forEach((recipe) => {
+            foundRecipebySearch = foundRecipebySearch.filter((recipe) => {
                 let allText = recipe.description + recipe.name + recipe.appliance
-                recipe.ingredients.forEach((ingredientData) => {
-                    allText = allText + ingredientData.ingredient
-                })
-                recipe.ustensils.forEach((ustensil) => {
-                    allText = allText + ustensil
-                })
+                recipe.ingredients.forEach((ingredientData) => { allText += ingredientData.ingredient })
+                recipe.ustensils.forEach((ustensil) => { allText += ustensil })
                 allText = allText.toLowerCase()
-                if(allText.search(word)>=0){
-                    searchArray.push(recipe)
-                }
+
+                return allText.indexOf(word)>=0 // Retourne "true" si le mot est présent dans le texte de la recette.
             })
-            foundRecipebySearch = searchArray
         })
     }
+
     return foundRecipebySearch
 }
