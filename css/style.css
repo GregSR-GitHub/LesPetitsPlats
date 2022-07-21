@@ -41,8 +41,11 @@ body{
 }
 
 .text-control{
+    position: absolute;
     border: 0;
     width: 100px;
+    top: 30px;
+    left: 20px;
     font-size: 1rem;
 }
 
@@ -58,6 +61,7 @@ body{
 
 .btn-lg{
     height: 69px;
+    width: 170px;
 }
 
 .card{
@@ -87,6 +91,10 @@ div.dropdown-multi.show{
     border: 0;
     margin: -5px 0 0;
 }
+
+.dropdown{
+    position: relative;
+}
  
 .dropdown-item{
     display: inline-block;
@@ -99,8 +107,10 @@ div.dropdown-multi.show{
 }
 
 .dropdown-toggle::after {
+    position: absolute;
+    right: 20px;
+    top: 40px;
     margin-left: .255em;
-    vertical-align: 2px;
     border-top: 0;
     border-right: 0;
     border-bottom: 2.5px solid;
