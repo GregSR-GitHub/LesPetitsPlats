@@ -1,22 +1,31 @@
 const tagSearchBtn = document.querySelectorAll('.btn')
+const tagSearchInput = document.querySelectorAll('.text-control')
 const tagSearchIngredientsInput = document.querySelector('#ingredients_search')
 const tagSearchAppliancesInput = document.querySelector('#appliances_search')
 const tagSearchUstensilsInput = document.querySelector('#ustensils_search')
 
 tagSearchBtn.forEach((btn) => btn.addEventListener("click", delayDropdownFocus));
+tagSearchInput.forEach((btn) => btn.addEventListener("click", displatDropdown));
 tagSearchIngredientsInput.addEventListener("input", searchTagIngredients);
 tagSearchAppliancesInput.addEventListener("input", searchTagAppliances);
 tagSearchUstensilsInput.addEventListener("input", searchTagUstensils);
 
 function DropdownFocus(btn){
-    if(btn.children[0]){
-        btn.children[0].focus()
+    let input = btn.parentElement.children[1]
+    if(input){
+        input.focus()
     }else{
         btn.focus()
     }
 }
 
 function delayDropdownFocus(e){
+    setTimeout(function() {DropdownFocus(e.target)}, 500);
+}
+
+function displatDropdown(e){
+    let btn = e.target.parentElement.children[0]
+    $(btn).dropdown('toggle')
     setTimeout(function() {DropdownFocus(e.target)}, 500);
 }
 
